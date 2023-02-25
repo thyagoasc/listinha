@@ -12,7 +12,9 @@ class HomePage extends StatelessWidget {
       drawer: const CustomDrawer(),
       appBar: CustomAppBar(titleContent: 'Listinha'),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).pushNamed('./edit');
+        },
         label: const Text('Nova lista'),
         icon: const Icon(Icons.edit),
       ),
