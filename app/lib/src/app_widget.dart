@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'home/home_page.dart';
 import 'shared/themes/theme.dart';
 
 class AppWidget extends StatelessWidget {
@@ -13,15 +14,7 @@ class AppWidget extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: lighTheme,
       darkTheme: darkTheme,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Listinha'.toUpperCase()),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: const Icon(Icons.add),
-        ),
-      ),
+      home: const HomePage(),
     );
   }
 }
