@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../shared/widgets/user_image_button.dart';
-
 class CustomAppBar extends AppBar {
   final String titleContent;
+  final Widget? userImageButton;
 
-  CustomAppBar({required this.titleContent, super.key})
+  CustomAppBar({required this.titleContent, this.userImageButton, super.key})
       : super(
           title: Text(titleContent.toUpperCase()),
           actions: [
-            const Padding(
-              padding: EdgeInsets.only(right: 8),
-              child: UserImageButton(),
+            Padding(
+              padding: const EdgeInsets.only(right: 8),
+              child: userImageButton,
             ),
           ],
         );

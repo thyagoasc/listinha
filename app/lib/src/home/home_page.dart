@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../shared/widgets/user_image_button.dart';
 import 'widgets/custom_app_bar.dart';
 import 'widgets/custom_drawer.dart';
 
@@ -10,7 +11,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const CustomDrawer(),
-      appBar: CustomAppBar(titleContent: 'Listinha'),
+      appBar: CustomAppBar(
+        titleContent: 'Listinha',
+        userImageButton: const UserImageButton(),
+      ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           Navigator.of(context).pushNamed('./edit');
